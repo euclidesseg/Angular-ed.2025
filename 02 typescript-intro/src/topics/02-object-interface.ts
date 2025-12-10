@@ -17,8 +17,8 @@ interface Character {
 const strider:Character = {
     name: 'Strider',
     hp: 100,
-    skills: ['Bash', 'Counter'],
+    skills: ['Bash', 'Counter'],    
 }
 
 strider.hometown = 'Rivendell';
-console.table(strider);
+console.log(strider);

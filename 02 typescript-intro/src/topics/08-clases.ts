@@ -11,7 +11,7 @@ export class Person{
     //** se deben inicializar las propiedades de  una clase en el constructor
     //** El constructor de una clase en angular sienta las bases para lo que es inyeccion de dependencias*/
     constructor(lastName:string,country:string){
-        this.name = lastName;
+        this.name = lastName; // lastName se asigna a name y a lastName por eso en el contructor hijo se mandan estos dor argumentos
         this.address = 'Medellin';
         this.lastName = lastName;
         this.country = country;
@@ -34,14 +34,10 @@ export class Person{
 export class Hero extends Person{
   
     
-    constructor(public alterEgo:string,
-                public age:number,
-                public realName:string,
-            ){
-           
+    constructor(public alterEgo:string, public age:number, public realName:string,){
         super('Man','Marvel');
-
     }
+
 }
 const ironMan = new Hero('Iron',40, 'Tony');
 

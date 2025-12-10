@@ -17,7 +17,7 @@ const shoppingCart:Product[] = [
 const impuesto:number = 0.51;
 
 const options:TaxCalculationOptions = {
-    inpuesto:impuesto,
+    impuesto:impuesto,
     products:shoppingCart
 }
 const [total, impuestoAply] = calcularImpuesto(options);

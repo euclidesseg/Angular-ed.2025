@@ -1,0 +1,5 @@
+===========================================================
+Componentes:
+En esta carpeta irán todos los componentes que no son paginas
+pueden ser desde sidebars navbars botones listas entre otros
+===========================================================

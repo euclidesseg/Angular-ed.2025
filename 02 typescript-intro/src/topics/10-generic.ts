@@ -7,7 +7,7 @@ export function whatsMyType<T>(argument:T):T{
     return argument;
 }
 
-/*  Dado a que a la funcion anterior se le puede enviar cualquier tipo de datos, typescrupt tiene un concepto llamado generic el cual permite que a una
+/*  Dado a que a la funcion anterior se le puede enviar cualquier tipo de datos, typescript tiene un concepto llamado generic el cual permite que a una
     función se le indique el tipo de datos que retornará dependiendo de el contexto en el que se use
     con la sintaxis  <T> se le indica que al funcion devuelve un tipo generico la letra T puede ser P, U, J cualquir la letra T simplemente es un 
     estandar*/

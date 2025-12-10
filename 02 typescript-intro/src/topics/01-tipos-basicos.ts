@@ -1,5 +1,5 @@
 /*  Typescript nos indica a nosotros a tener un tener un tipado estricto e ir indicandole a nuestro codigo
-    que tipo van a tener nuestras bariales o que tipo de objeto seran*/
+    que tipo van a tener nuestras variables o que tipo de objeto seran*/
 
 let name = 'Strider'; // tipo de dato especificado por su valor
 const lastname = 'Doe' // constante

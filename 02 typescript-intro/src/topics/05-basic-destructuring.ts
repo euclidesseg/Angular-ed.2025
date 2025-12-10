@@ -25,10 +25,10 @@ const audioPlayer: AudioPlayer = {
 // destructuring es tomar propiedades que me interesen de un objeto 
 // const {song:anotherSong} = audioPlayer  // song:anotherSong esta sintaxis renombra la la propiedad song del objeto y la guarda en una nueva constante
 // const {songDuration:anotherDuration} = audioPlayer  // song:anotherSong esta sintaxis renombra la la propiedad song del objeto y la guarda en una nueva constante
-// const {details:{author:anotherAuthor}} = audioPlayer
+const {details:{author:anotherAuthor}} = audioPlayer // Ingresando a la propiedad author dentro de details
 // console.log(`Song: ${anotherSong}`)
 // console.log(`songDuration: ${anotherDuration}`)
-// console.log(`songAuthor: ${anotherAuthor}`)
+console.log(`songAuthor: ${anotherAuthor}`)
 
 
 // ** Desestructuración de arreglos

@@ -14,29 +14,37 @@ const tablet:Product = {
     price: 500
 }
 
+export interface TaxCalculationOptions{
+    impuesto:number;
+    products:Product[];
+}
+
 const soppingCart = [phone, tablet] // opciones de compra
 const impuesto = 0.51; // impuesto de cada compra
 
 
 
-export interface TaxCalculationOptions{
-    inpuesto:number;
-    products:Product[];
-}
 
 // const calcularImpuesto = (options:TaxCalculationOptions):number[] =>{
-export const calcularImpuesto = (options:TaxCalculationOptions):[number,number] =>{
-    let total = 0;
-    options.products.forEach(({price}) =>{ //({price}) desestructura el precio del o bjeto actual
-        total += price;
-    })
-    return [total, total * options.inpuesto]
+export const calcularImpuesto = (options:TaxCalculationOptions):[number,number] =>{// devuelve una tupla o arreglo con solo dos elementos
+    // let total = 0;
+    const  {products:productos} = options;
+
+    // tradicional con forEach
+    //  options.products.forEach(({price}) =>{
+    //     total += price;
+    // })
+
+    // Con .reduce para contar
+    let total = productos.reduce((t, {price}) => t + price,0)
+
+    return [total, total * options.impuesto]
 }
 
 
-// aplicando destructuring a este arregloq ue devuelve la función calcularImpuesto
+// aplicando destructuring a este arreglo que devuelve la función calcularImpuesto
 const [total, impuestoAply] = calcularImpuesto({
-    inpuesto:impuesto,
+    'impuesto': impuesto,
     products:soppingCart
 
 })

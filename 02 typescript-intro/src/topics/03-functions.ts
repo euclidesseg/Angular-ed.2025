@@ -1,4 +1,5 @@
 // ** funcion tradicional
+/* Todas las funciones funcionan undefined por defecto */
 function addNumbers(a:number,b:number):string{
     return `${a+b}`;
 }
@@ -8,7 +9,7 @@ const addNumberArrow = (a:number,b:number):string =>{
     return `${a + b}`;
 }
 
-// ** parametros opcionales, obligatorios y inicializados en funciones
+// ** Parametros opcionales, obligatorios y inicializados en funciones
 function multiPly(fisrtNumber:number, secondNumber?:number, base:number = 2){
     return fisrtNumber * base;
 }

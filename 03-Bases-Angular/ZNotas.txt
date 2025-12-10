@@ -1,0 +1,32 @@
+===========================================================
+===========================================================
+Explicacion directorios
+== tsconfig.json
+--Contiene las versiones de javascrip y las versiones del modulo del proyecto
+
+== package.json
+-- Indica configuracions como el nombre de la aplicacion y la version de la misma
+
+-- Indica tambien los script que quiero ejecutar ya sea para 
+-- levantar la aplicacion, contruirla, o para entrar en modo test
+-- puedo agregarle tantos script adicionales como quiera
+
+-- Indica proyecto privado
+-- Tambien nos muestra las dependencias pripias de angular como la version de los form del core del compilador del router entre otros
+-- Tambien nos muestra todas las dependencias de ternceros devDependencies estas aplicaciones son para desarrollo o para testing
+    ya que no viajan asta el bondle final de la aplicación.
+
+
+== angular.json
+-- Es un archivo que indica la configuracion de angular para entornos de desarrollo produccion o testing
+-- Suele ser usado normalmente para: agregar estilos globales
+
+===========================================================
+===========================================================
+Directorio src
+-- Contiene los arvhivos/componentes principales de nuestra app
+    entre ellos el app.css, app.html, y el app.ts los
+== Nota: el app.html es opcional se recomienda usar cuando el html supera las 4 lineas de codigo
+
+-- el app.ts contiene un decorador @Coponente el cual hace que mi clase sea un componente
+
