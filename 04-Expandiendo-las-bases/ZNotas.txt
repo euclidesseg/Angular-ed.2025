@@ -2,4 +2,15 @@
 Componentes:
 En esta carpeta irán todos los componentes que no son paginas
 pueden ser desde sidebars navbars botones listas entre otros
+incluye componentes compartidos, es decir, elementos que seran persistentes durante la 
+navegación.
 ===========================================================
+
+
+Notas:
+
+-- En paginas no se suele usar selectores dado que: 
+-- estas se renderizan dentro del router-outlet
+
+
+-- En los componentes si se suelen usar dado que estos uno puede decidir donde ponerlos

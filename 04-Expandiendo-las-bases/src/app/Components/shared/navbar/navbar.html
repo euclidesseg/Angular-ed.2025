@@ -1,1 +1,66 @@
-<p>navbar works!</p>
+<style>
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #212121;
+        color: white;
+        padding: 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a.active {
+        color: red;
+    }
+</style>
+<nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact:true }">Contador</a>
+    <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
+    <a [routerLink]="['/dragonball']" [routerLinkActive]="'active'">Dragonball</a>
+    <!--  -->
+</nav>
+
+<!--
+        routerLink="/"
+        ----------------
+        ✔ Sin corchetes → se interpreta como un STRING literal.
+          Es decir, Angular toma el valor tal cual: "/".
+
+        routerLinkActive="active"
+        --------------------------
+        ✔ Sin corchetes → STRING literal.
+          Angular agregará la clase 'active' si la ruta coincide.
+
+        [routerLinkActiveOptions]="{ exact:true }"
+        ------------------------------------------
+        ✔ Con corchetes → expresión de JavaScript.
+          Aquí enviamos un objeto:
+          - exact:true → activa el link solo si la ruta es EXACTAMENTE "/".
+            Sin exact, también se activaría en rutas como "/home", "/hero", etc.
+    -->
+    <!--
+        [routerLink]="['/hero']"
+        -------------------------
+        ✔ Con corchetes → se evalúa como una expresión.
+          Aquí usamos un ARRAY porque Angular recomienda esta forma
+          (permite parámetros dinámicos: ['/hero', id]).
+          variables dinámicas o propiedades computadas ideal para enviar parametros a traves de url
+
+        Ejemplos que serían válidos:
+          [routerLink]="['/hero', heroId]"
+          [routerLink]="myDynamicRoute"
+          [routerLink]="['/user', user.id, 'info']"
+
+        [routerLinkActive]="'active'"
+        ------------------------------
+        ✔ Con corchetes → Angular evalúa la expresión.
+          Aquí pasamos un STRING dentro de comillas simples.
+          Funciona igual que sin corchetes, pero permite lógica.
+          
+          Ejemplo dinámico válido:
+            [routerLinkActive]="isDarkMode ? 'active-dark' : 'active-light'"
+
+    -->
