@@ -1,0 +1,19 @@
+
+<h3>{{title()}}</h3>
+<ol>
+    @for (personaje of characters(); track personaje.id) {
+    <!--track personaje.id // indica que vamos a dar seguimiento a cada elemento del arreglo mediante el id para este caso -->
+    @if (personaje.power>500) {
+    <li>
+        <span>{{personaje.name}}</span>
+        <strong [class.text-danger]="personaje.power>9000" [class.text-primary]="personaje.power<9000">
+            ({{personaje.power}})
+        </strong>
+    </li>
+    }@else {
+    <strong>Aqui no hay nadie</strong>
+    }
+    }@empty {
+    <p>No hay elementos en este arrreglo</p>
+    }
+</ol>

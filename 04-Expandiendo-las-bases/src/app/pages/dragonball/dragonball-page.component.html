@@ -29,12 +29,12 @@
     <div class="col-12 col-sm-6">
         <h3>Listado</h3>
         <ol>
-            @for (personaje of characters(); track personaje) { 
+            @for (personaje of characters(); track personaje.id) { 
                 <!--track personaje.id // indica que vamos a dar seguimiento a cada elemento del arreglo mediante el id para este caso -->
                 @if (personaje.power>500) {
                     <li>
                         <span>{{personaje.name}}</span>
-                        <strong [class.text-danger]="personaje.power>9000" [class.text-primary]="personaje.power<9000"> 
+                        <strong [class.text-danger]="personaje.power>9000" [class.text-primary]="personaje.power<9000"> <!--- [class.text-danger]="personaje.power>9000" agrega una clase text-danger si el personaje.power es menor a 9000-->
                             ({{personaje.power}}) 
                         </strong>
                     </li>

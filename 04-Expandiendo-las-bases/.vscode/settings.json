@@ -1,0 +1,11 @@
+{
+    "scm.compactFolders": true,
+    "workbench.editor.pinnedTabSizing": "normal",
+    "explorer.compactFolders": false,
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "externalTemplate": true,
+            "inlineStyle": true
+        }
+    }
+}

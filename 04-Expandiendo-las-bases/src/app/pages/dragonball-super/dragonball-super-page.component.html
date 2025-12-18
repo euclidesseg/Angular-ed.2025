@@ -2,48 +2,19 @@
 <hr>
 <section class="row">
     <div class="col-12 col-sm-6">
-        <h3>Agregar: {{name()}}, Poder:{{power()}}</h3>
-        <input
-            type="text" 
-            class="form-control mt-2 mb-2" 
-            placeholder="Nombre" 
-            #txtName 
-            (input)="name.set(txtName.value)"
-        />
-        <!-- 
-            #txtName: Es una referencia directa al elemento HTML (el input como tal).
-            Se llama Template Reference Variable (Variable de referencia de plantilla)
 
-            Y asi como funciona para este input funciona para cualquiere elemento del DOM
-        -->
-        <input 
-            type="text" 
-            class="form-control mt-2" 
-            placeholder="Poder"
-            #txtPower
-            type="number"
-            (input)="power.set(+txtPower.value)"
-        />
+        <dragonball-character-add>
+        </dragonball-character-add>
+       
         <button (click)="agregarPersonaje()" class="btn-primary mt-2 btn">Agregar</button>
     </div>
     <div class="col-12 col-sm-6">
-        <h3>Listado</h3>
-        <ol>
-            @for (personaje of characters(); track personaje) { 
-                <!--track personaje.id // indica que vamos a dar seguimiento a cada elemento del arreglo mediante el id para este caso -->
-                @if (personaje.power>500) {
-                    <li>
-                        <span>{{personaje.name}}</span>
-                        <strong [class.text-danger]="personaje.power>9000" [class.text-primary]="personaje.power<9000"> 
-                            ({{personaje.power}}) 
-                        </strong>
-                    </li>
-                }@else {
-                    <strong>Aqui no hay nadie</strong>
-                }
-            }@empty {
-                <p>No hay elementos en este arrreglo</p>
-            }
-        </ol>
+        <dragonball-character-list 
+            [characters]="characters()"
+            [title]="'Listado Heroes'"
+        >
+        </dragonball-character-list> 
+        <!--Con [characters] le envio al componente hijo un argumento que está esperando a treaves de un input signals-->
+       
     </div>
 </section>

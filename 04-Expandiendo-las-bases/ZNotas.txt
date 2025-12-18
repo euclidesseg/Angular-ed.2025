@@ -84,8 +84,6 @@ al componente que se cargará y se haaria de la siguieente manera:
   $count: Una propiedad personalizada para llevar un conteo de las iteraciones.
   $odd:   Indica si el índice del elemento actual es impar.
 
-8: @Input({required: true}) title!:string; // ahoara puedo indicar que los inputs son o no son requeridos esto para que al momento de llamar a ese componente dentro de otro
-   deva o no mandar una propie
 
 ==========================================================================================
 
@@ -94,6 +92,11 @@ al componente que se cargará y se haaria de la siguieente manera:
 
 
 ==========================================================================================
-Comunicación entre componentes - Nueva sintaxis
+// Comunicación entre componentes - Nueva sintaxis:
+// requerido = input.required<tipo>() ahoara puedo indicar que los inputs son o no son requeridos mediante una signal y especificar el tipo 
+esto para que al momento de llamar a ese componente dentro de otro
+deva o no mandar una propiedad
+
+// 
 ==========================================================================================
 

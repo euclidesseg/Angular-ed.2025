@@ -31,6 +31,7 @@ Se explican en esta sección los temas de
 **RouterLInk**
 
 **Componentes**
+**comunicacion entre componentes padres e hijos enviar parametros a traves de inputs**
 
 
 
