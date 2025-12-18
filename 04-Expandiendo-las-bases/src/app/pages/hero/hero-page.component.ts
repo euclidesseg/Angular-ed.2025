@@ -2,7 +2,7 @@ import { TitleCasePipe, UpperCasePipe } from "@angular/common";
 import { Component, computed, signal } from "@angular/core";
 
 @Component({
-    imports:[TitleCasePipe,UpperCasePipe],
+    imports:[UpperCasePipe],
     template:`
    <h1>{{ heroName() }}</h1>
 

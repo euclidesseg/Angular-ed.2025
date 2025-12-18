@@ -7,10 +7,93 @@ navegación.
 ===========================================================
 
 
+
+
+============================================================================
 Notas:
 
 -- En paginas no se suele usar selectores dado que: 
 -- estas se renderizan dentro del router-outlet
 
-
 -- En los componentes si se suelen usar dado que estos uno puede decidir donde ponerlos
+============================================================================
+
+
+
+
+
+==========================================================================================
+Cambios importantes en angular:
+1: ===== Desaparecio el App.Module
+  En su lugar tenemos el app.config.ts
+  Este archivo app.config.ts nos va a permitir hacer inyeccion de modulos o otros proveedores para tener el mismo comportamientos de antes
+
+  Entonces anteriormente el main.ts al momento de levantar el bootstrap de la aplicacion usaba el AppModule
+  ahora ya no usa el appModule si no el app.config
+
+2:    selector: 'app-root',
+      standalone: true,// se utiliza para marcar un componente como independiente. Esto significa que el componente
+                          no necesita ser declarado en un módulo NgModule para funcionar.
+      imports: [CommonModule, RouterOutlet],
+      templateUrl: './app.component.html',
+      styleUrl: './app.component.css'
+    })
+
+3: ===== AppRoute: Crea un archivo de rutas que se proveen automaticamente en el app.config tal cual como se proveee o se importa
+  el modulo de rutas en el antigui appModule
+
+4: standaloneComponent: en cada componente se utiliza para marcar un componente como independiente. Esto significa que el componente
+                          no necesita ser declarado en un módulo NgModule para funcionar.
+            al marcar un componente como independiente hace que la aplicacionno use ningun modulo para manejar componentes
+
+5: Rutas: dentro del direcctorio de App se crea por defecto uno archivo llamado app.routes.ts
+   y se llamaran las rutas de dos maneras
+  01: loadComponent:() => import ('./dashboard/dashboard.component').then((component) => component.DashboardComponent)
+  en las versiones anteriores a la 17 se cargaria o se llamaria un modulo hijo el cual tiene rutas hijas en este caso se lla un componenente hojo app.component
+
+  02: loadComponent:() => import ('./dashboard/dashboard.component'), de esta manera tambien podemos llamar a un componente dentro de otro subdirectorio o modulo
+      pero par que nos funcione el componente debe estar exportado por defecto
+
+la forma de indicar que este componente tiene hojos es agregando  una propiedad children que vendria a ser un arreglo de rutas las cuales pertenecen
+al componente que se cargará y se haaria de la siguieente manera:
+ path: 'dashboard',
+    loadComponent: () => import('./dashboard/dashboard.component'),
+    children:[
+        {
+
+        }
+    ]
+
+    <!--  -->
+6: //#agregar alias
+  01. nos vamos a tsconfig.json dentro del objeto compilerOptions
+  02. configuramos un arreglo en el que iran las rutas y alias que queramos agregar
+    "paths": {
+      "@shared/*":["./src/app/dashboard/shared/*"],
+    },
+
+
+7: @For === Propiedades dentro de un for en la nueva sintaxis
+
+  @for(framework of frameWorks(); track framework; let i = $index, first = $first, last = $last, event = $even, count = $count, odd = $odd){}
+  $framework: Devuelve el elemento del arreglo este nos servirá para dar seguimiento.
+  $index: Devuelve el índice del elemento actual en la iteración.
+  $first: Indica si el elemento actual es el primero en la iteración.
+  $last:  Indica si el elemento actual es el último en la iteración.
+  $even:  Indica si el índice del elemento actual es par.
+  $count: Una propiedad personalizada para llevar un conteo de las iteraciones.
+  $odd:   Indica si el índice del elemento actual es impar.
+
+8: @Input({required: true}) title!:string; // ahoara puedo indicar que los inputs son o no son requeridos esto para que al momento de llamar a ese componente dentro de otro
+   deva o no mandar una propie
+
+==========================================================================================
+
+
+
+
+
+==========================================================================================
+Comunicación entre componentes - Nueva sintaxis
+==========================================================================================
+

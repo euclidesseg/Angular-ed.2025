@@ -8,18 +8,16 @@ interface Character {
 
 @Component({
     selector: 'app-dragonball', // no es necesario en paginas
-    templateUrl: './dragonball-page.component.html',
+    templateUrl: './dragonball-super-page.component.html',
     styles: ``,
 })
-export class DragonBallPageComponent {
+export class DragonBallSuperPageComponent {
     name =  signal('');
     power =  signal<number>(0);
 
     personajes: Character[] = [
         {id: 1, name: 'Goku', power: 9001},
-        // {id: 2, name: 'vegeta', power: 8001},
-        // {id: 3, name: 'Picoro', power: 3001},
-        // {id: 4, name: 'Yampcha', power: 400}
+        {id: 2, name: 'vegeta', power: 8001},
     ]
     value = parseInt('2');
 
