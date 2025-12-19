@@ -3,18 +3,18 @@
 <section class="row">
     <div class="col-12 col-sm-6">
 
-        <dragonball-character-add>
+        <dragonball-character-add
+            (newCharacterEvent)="dragonBallServiceIn.agregarPersonaje($event)"
+        >
         </dragonball-character-add>
        
-        <button (click)="agregarPersonaje()" class="btn-primary mt-2 btn">Agregar</button>
     </div>
     <div class="col-12 col-sm-6">
         <dragonball-character-list 
-            [characters]="characters()"
+            [characters]="dragonBallServiceIn.characters()"
             [title]="'Listado Heroes'"
         >
         </dragonball-character-list> 
         <!--Con [characters] le envio al componente hijo un argumento que está esperando a treaves de un input signals-->
-       
     </div>
 </section>

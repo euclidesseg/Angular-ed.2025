@@ -1,6 +1,7 @@
  <h3>Agregar: {{name()}}, Poder:{{power()}}</h3>
         <input
             type="text" 
+            [value]="name()"
             class="form-control mt-2 mb-2" 
             placeholder="Nombre" 
             #txtName 
@@ -13,10 +14,12 @@
             Y asi como funciona para este input funciona para cualquiere elemento del DOM
         -->
         <input 
-            type="text" 
-            class="form-control mt-2" 
-            placeholder="Poder"
-            #txtPower
             type="number"
+            [value]="power()"
+            class="form-control mt-2" 
+            placeholder="poder"
+            #txtPower
             (input)="power.set(+txtPower.value)"
         />
+        
+        <button (click)="agregarPersonaje()" class="btn-primary mt-2 btn">Agregar</button>

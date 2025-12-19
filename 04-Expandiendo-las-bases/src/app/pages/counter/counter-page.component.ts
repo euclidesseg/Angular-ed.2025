@@ -12,19 +12,7 @@ import { Component, signal } from "@angular/core";
 export class CounterPageComponent{
     counter = 10;
 
-    constructor(){
-        setInterval(() => {
-            // ⛔ ESTA LÍNEA CAMBIA EL VALOR EN MEMORIA, PERO NO NOTIFICA A ANGULAR
-            // Por lo tanto, el template {{counter}} NO se actualizará.
-            this.counter += 1
 
-            // ✅ DESCOMENTAR PARA HACER REACTIVO:
-            // Si descomentas esta línea, la Signal notifica a Angular.
-            // El template se refresca y {{counter}} se actualiza por el 'efecto colado'.
-            this.counterSignal.update(v => v+1);
-             console.log('tick')
-        }, 2000);
-    }
     increaseBy = (value:number) =>{
         this.counter += value;
         this.counterSignal.update((current) => current + value)

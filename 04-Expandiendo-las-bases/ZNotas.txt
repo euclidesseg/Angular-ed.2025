@@ -93,10 +93,47 @@ al componente que se cargará y se haaria de la siguieente manera:
 
 ==========================================================================================
 // Comunicación entre componentes - Nueva sintaxis:
-// requerido = input.required<tipo>() ahoara puedo indicar que los inputs son o no son requeridos mediante una signal y especificar el tipo 
-esto para que al momento de llamar a ese componente dentro de otro
-deva o no mandar una propiedad
+// input: de padrea a hijo
+// requerido = input.required<tipo>()
+// ahora puedo indicar que los inputs son o no son requeridos en el hijo, mediante una signal y especificar el tipo 
+// esto para que al momento de llamar a ese componente dentro de otro
+// deva o no mandar una propiedad.
 
-// 
+// Output:  de hijo a padre
+// newCharacterEvent = output<Character>();
+// ahora puedo indicar de forma sencilla que tipo de dato que voy a enviar a un elemento padre
+// mediante un evento y recepcionarlo de forma cencilla mediante $event
+// <dragonball-character-add (newCharacterEvent)="agregarPersonaje($event)"/>
 ==========================================================================================
+
+
+
+==========================================================================================
+// Servicios:
+// Los servicios son fragmentos de código reutilizables que se pueden compartir en toda la aplicación Angular. 
+// Suelen gestionar la obtención de datos, la lógica de negocio u otras funciones a las que varios componentes necesitan acceder
+==========================================================================================
+
+==========================================================================================
+// La forma de hacer uso de estos servicios en un componente es con la siguiente sintaxis
+// public dragonBallServiceIn = inject(DragonBallService); esto hace 
+// inject() es una función de Angular (Angular 14+)
+// Permite obtener una dependencia sin usar el constructor
+// es más limpio en caso de que existan muchos servicios
+==========================================================================================
+
+==========================================================================================
+// effect:
+// Los effects son una herramienta de Angular Signals que sirven para ejecutar código cuando cambia una señal
+// especialmente cuando ese código tiene efectos secundarios.
+// Llamar a una API, Escribir en consola, Guardar en localStorage, Actualizar el DOM, Navegar con el router.
+==========================================================================================
+==========================================================================================
+// Desplegar y HasRouter
+
+// ng build:
+// Construir la aplicacion en produccion
+
+==========================================================================================
+
 

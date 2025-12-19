@@ -31,8 +31,15 @@ Se explican en esta sección los temas de
 **RouterLInk**
 
 **Componentes**
-**comunicacion entre componentes padres e hijos enviar parametros a traves de inputs**
+**comunicacion entre componentes enviar datos de padres a hijos input**
+**comunicacion entre componentes enviar datos de hijos a padres outpus**
 
+
+**Servicios**
+**Inyeccion de dependeicas**
+**Efectos**
+**Local storage con validaciones**
+**Despliegues y HasRouter**
 
 
 ===============================================================================
