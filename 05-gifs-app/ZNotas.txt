@@ -1,0 +1,6 @@
+===========================================================
+ENVIRONMENTS:
+son archivos de configuración (JSON) que permiten definir variables y 
+ajustes específicos para diferentes etapas de desarrollo (desarrollo, producción, pruebas), 
+como URLs de APIs o claves, para evitar modificarlos manualmente en el código al cambiar de entorno
+===========================================================

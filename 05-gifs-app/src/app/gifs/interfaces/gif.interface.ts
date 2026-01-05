@@ -1,0 +1,3 @@
+interface gif{
+    url:string
+}

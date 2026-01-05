@@ -41,6 +41,20 @@ Se explican en esta sección los temas de
 **Local storage con validaciones**
 **Despliegues y HasRouter**
 
+===============================================================================
+
+
+===============================================================================
+###### **Sección 05-Gifs App**
+Se explican en esta sección los temas de
+
+**Separacion de componentes**
+**Rutas y rutas hijas**
+**Environments - Variables de entorno**
+
+**Alias de paths**
+
+
 
 ===============================================================================
 
