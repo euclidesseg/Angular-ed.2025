@@ -4,3 +4,85 @@ son archivos de configuración (JSON) que permiten definir variables y
 ajustes específicos para diferentes etapas de desarrollo (desarrollo, producción, pruebas), 
 como URLs de APIs o claves, para evitar modificarlos manualmente en el código al cambiar de entorno
 ===========================================================
+===========================================================
+Paleta de comandos:
+Paste JSON as code:
+Para pegar un json como codigo vamos a la pestaña de vsc llamda view
+posteriormente comanpalete y seleccionamos aste JSON as code, 
+tambien podemos usar control+shif+v
+===========================================================
+
+
+===========================================================
+Servicios:
+Un servicio en angular es un componente el cual se encarga de realizar peticions hacia
+una backend con el fin de obtener datos de interés.
+
+📌 ¿Cuándo se ejecutan los servicios en Angular?
+
+Los servicios en Angular NO se ejecutan automáticamente al cargar la aplicación.
+Un servicio se crea y su constructor se ejecuta únicamente cuando Angular
+necesita una instancia de él, es decir, cuando es inyectado por primera vez
+en un componente, directiva, pipe u otro servicio.
+
+Ejemplo:
+- Si un componente es renderizado (por una ruta activa o por estar en la vista),
+  Angular construye ese componente.
+- Durante la construcción del componente, si se inyecta un servicio
+  (usando constructor o inject()), Angular crea la instancia del servicio.
+- En ese momento se ejecuta el constructor del servicio (una sola vez).
+
+Importante:
+- Si el componente NO se renderiza, el servicio NO se crea.
+- El desarrollador NO debe llamar manualmente el constructor del servicio.
+- Si una lógica (como una petición HTTP) no está en el constructor del servicio,
+  entonces debe llamarse explícitamente desde el componente.
+
+Buena práctica:
+- Evitar ejecutar peticiones HTTP en el constructor del servicio.
+- El servicio debe exponer métodos.
+- El componente debe decidir CUÁNDO llamar esos métodos.
+
+===========================================================
+
+
+
+
+===========================================================
+HttpClient:
+Es el servicio oficial de Angular para hacer peticiones HTTP a un servidor o API.
+este permite la aplicacion angular se comunique con un backend y pueda:
+pedir datos, modificar, enviar, borrar, etc
+
+En la version 20 + de angular para usar este servicio se deve agregar en la configuracion de la aplicacion
+
+===========================================================
+
+
+===========================================================
+Observable:
+Es un patron de diseño tratado como fuente de datos el cual puede emitir uno o 
+muchos valores, en diferentes momentos, y a los cuales nos podemos suscribir
+para reaccionar cuando esos valores llegan, estos son usados pricipalmente en servicios
+de angular mediante peticiones http las cuales devuelven objetos como los valores
+===========================================================
+
+
+===========================================================
+Pipe():
+Es un método que se usa para encadenar operadores que transforman, filtran o controlan 
+el flujo de los Observables antes de que alguien se suscriba a ellos.
+puedo encadenar tantos operadores como lo requiera
+
+.pipe(  
+      tap(res => console.log("Tap¿", res)),
+      map(({data}) => data),
+      map((items) => GifMapper.mapGiphyItemsToGifArray(items))
+  )
+===========================================================
+===========================================================
+Record<K,T>:
+Record es un tipo utilitario de TypeScript que sirve para definir un objeto 
+cuyas claves son dinamicas y sus valores tienen un tipo específico.
+Record<string, Gif[]>
+===========================================================

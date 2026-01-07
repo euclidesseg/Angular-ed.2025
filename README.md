@@ -1,5 +1,29 @@
 ===============================================================================
 
+###### **Sección 03-typescript introduccion**
+
+Se explican en esta sección los temas de
+
+**Tipos**
+
+**Objetos de interfaces**
+
+**Funciones**
+
+**Desestructuracion básica**
+
+**Desestructuración de funciones**
+
+**Clases**
+**Composicion de clases**
+**Genericos**
+**Encadenamiento opcional**
+
+===============================================================================
+
+
+===============================================================================
+
 ###### **Sección 03-bases**
 
 Se explican en esta sección los temas de
@@ -15,8 +39,6 @@ Se explican en esta sección los temas de
 **Decoradores @Components**
 
 **Paginas**
-
-
 
 ===============================================================================
 
@@ -50,13 +72,16 @@ Se explican en esta sección los temas de
 
 **Separacion de componentes**
 **Rutas y rutas hijas**
-**Environments - Variables de entorno**
-
+**PALETA DE COMANDOS**
+**Environments-Variables de entorno**
 **Alias de paths**
-
-
-
+**Rutas dinamicas** 
+**Manejo de LocalStorage**
+**Observables a Señales**
+**Reutilización de componentes**
+**Peticiones HTTP**
+**Manejo de caché**
+**Mapeo de información**
+**Pipe() para encadenar operadores RXJS**
+**Records tipado para un objeto de llaves dinamicas**
 ===============================================================================
-
-
-

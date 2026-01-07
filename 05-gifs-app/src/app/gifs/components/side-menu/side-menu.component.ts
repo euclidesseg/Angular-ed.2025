@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'side-menu',
-  imports: [RouterOutlet, SideMenuHeaderComponent, SideMenuOptionsComponent],
+  imports: [SideMenuHeaderComponent, SideMenuOptionsComponent],
   templateUrl: './side-menu.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
