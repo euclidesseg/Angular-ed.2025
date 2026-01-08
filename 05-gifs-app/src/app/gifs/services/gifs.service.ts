@@ -1,10 +1,22 @@
 import { environment } from '@environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import type { GiphyResponse } from '../interfaces/giphy.interfaces';
 import type { Gif } from '../interfaces/gif.interface';
 import { GifMapper } from '../mapper/gif.mapper';
-import { map, tap } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
+
+
+const loadHistoryGifsFromLocalStorage = ():Record<string, Gif[]> =>{
+    const gifs = localStorage.getItem('historyGifs');
+    if(!gifs) return {};
+    try{
+        return JSON.parse(gifs) as Record<string,Gif[]>
+    }catch(err){
+        console.error("Erros cargando elementos desde el localSrorage")
+        return {}
+    }
+}
 
 @Injectable({ providedIn: 'root' })
 export class GifService {
@@ -23,10 +35,14 @@ export class GifService {
     trendingGifs = signal<Gif[]>([])
     trendingGifsLoading = signal<boolean>(true)
 
-    searchHistory = signal<Record<string, Gif[]>>({});// este sera un objeto con la siguiente firma {'Reaction':[reaction1,reaction2,reaction3]}
+    searchHistory = signal<Record<string, Gif[]>>(loadHistoryGifsFromLocalStorage());// este sera un objeto con la siguiente firma {'Reaction':[reaction1,reaction2,reaction3]}
     searchHistoryKeys = computed(() => Object.keys(this.searchHistory())) // esto será un arreglo con todas las keys de mi historial de busqueda
 
 
+    saveHistoryToLocalStorage = effect(() =>{
+        console.log(`Historico de gifs ${this.searchHistory()}`)
+        localStorage.setItem('historyGifs', JSON.stringify(this.searchHistory()))
+    })
 
     loadTrendyingGifs() {
         this.http.get<GiphyResponse>(`${environment.giphyUrl}/gifs/trending`, {
@@ -42,7 +58,7 @@ export class GifService {
         })
     }
 
-    searchGifByQuery(query: string) { // Este metodo regresa un observable al cual nos susrcribiremos cuando lo necesitemos en cualquier componente
+    searchGifByQuery(query: string):Observable<Gif[]> { // Este metodo regresa un observable al cual nos susrcribiremos cuando lo necesitemos en cualquier componente
         return this.http.get<GiphyResponse>(`${environment.giphyUrl}/gifs/search`, {
             params: {
                 api_key: environment.apiKey,
@@ -62,6 +78,10 @@ export class GifService {
             }),
         )
         
+    }
+
+    getHistoryGifs(query:string):Gif[]{
+        return this.searchHistory()[query]??[];
     }
 
 }

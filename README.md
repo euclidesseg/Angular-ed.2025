@@ -84,4 +84,5 @@ Se explican en esta sección los temas de
 **Mapeo de información**
 **Pipe() para encadenar operadores RXJS**
 **Records tipado para un objeto de llaves dinamicas**
+**LocalStorage**
 ===============================================================================
