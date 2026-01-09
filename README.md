@@ -86,3 +86,16 @@ Se explican en esta sección los temas de
 **Records tipado para un objeto de llaves dinamicas**
 **LocalStorage**
 ===============================================================================
+
+===============================================================================
+###### **Sección 06-countri app**
+Se explican en esta sección los temas de
+
+**Rutas Hijas**
+**Rutas Anidadas**
+**Creación y comunicación entre componentes**
+**Tailwind y DaisyUI**
+**Archivo de ruta por feature / module**
+**Carga prezosa de modulos de ruta**
+
+===============================================================================
