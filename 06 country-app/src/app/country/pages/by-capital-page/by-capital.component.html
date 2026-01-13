@@ -1,34 +1,5 @@
-<section class="flex flex-row gap-2 mt-4">
-    <input 
-    type="text" 
-    class="input input-bordered mr-5 w-56" 
-    placeholder="Buscar por capital"
-    #txtSearch
-    (keyup.enter)="onSearch(txtSearch.value)"
-    >
-    <button 
-    class="btn btn-primary"
-    (click)="onSearch(txtSearch.value)"
-    >Buscar</button>
-</section>
+<app-search (strSearch)="onSearch($event)">
 
-<section class="mt-5">
-    <table class="table table-md w-full">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>icono</th>
-                <th>Bandera</th>
-                <th>Nombre</th>
-                <th>Capital</th>
-                <th>Población</th>
-                <th>Detalles</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr></tr>
-        </tbody>
-    </table>
-</section>
+</app-search>
 
-<!-- TODO separar ambas secciones en componentes separados -->
+<app-table></app-table>
