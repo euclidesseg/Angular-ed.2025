@@ -5,7 +5,7 @@ import { TableComponent } from "../../components/table-component/table.component
 @Component({
   selector: 'app-by-capital',
   imports: [SearchComponent, TableComponent],
-  templateUrl: './by-capital.component.html',
+  templateUrl: './by-capital.component.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ByCapitalPageComponent { 
