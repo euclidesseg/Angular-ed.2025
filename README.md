@@ -88,7 +88,7 @@ Se explican en esta sección los temas de
 ===============================================================================
 
 ===============================================================================
-###### **Sección 06-countri app**
+###### **Sección 06-countri app maquetación**
 Se explican en esta sección los temas de
 
 **Rutas Hijas**
@@ -97,5 +97,18 @@ Se explican en esta sección los temas de
 **Tailwind y DaisyUI**
 **Archivo de ruta por feature / module**
 **Carga prezosa de modulos de ruta**
+
+===============================================================================
+===============================================================================
+###### **Sección 07-countri app funcionalidad**
+Se explican en esta sección los temas de
+
+**Resources**
+**rxResources**
+**Señales**
+**Servicios**
+**Reutilización de componentes**
+**Peticiones http**
+**Operadores de RXJS**
 
 ===============================================================================

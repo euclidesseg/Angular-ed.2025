@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { CountryService } from '../../services/country.service';
 
 @Component({
   selector: 'app-country-page',
@@ -6,4 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './country-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CountryPageComponent { }
+export class CountryPageComponent {
+
+  countryService = inject(CountryService);
+ }
