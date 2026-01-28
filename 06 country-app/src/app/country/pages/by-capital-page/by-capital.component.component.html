@@ -1,5 +1,5 @@
 <app-search (strSearch)="onSearch($event)" [placeHolder]="'Buscar por capital'">
 
 </app-search>
-
-<app-table [countries]="countries()"></app-table>
+<app-table [countries]="countries()" [erorMessage]="isError()!" [isLoading]="isLoading()" [isEmpty]="countries().length === 0"></app-table> 
+    <!-- ! undique que siempre va a ir un error -->

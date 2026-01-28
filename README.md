@@ -107,6 +107,7 @@ Se explican en esta sección los temas de
 **rxResources**
 **Señales**
 **Servicios**
+**Delay operator rxjs**
 **Reutilización de componentes**
 **Peticiones http**
 **Operadores de RXJS**

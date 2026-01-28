@@ -1,0 +1,21 @@
+===========================================================================
+--Resources:
+-- En angular +19 Resource API es una nueva forma de manejar operaciones asíncronas —como peticiones HTTP— 
+-- integrándolas directamente con el sistema de Signals.
+
+-- En el componente by-country-page.component se ven mas detalles de su implementación
+
+--RxResource
+-- En Angular 21, los rxResource son una forma reactiva y declarativa de manejar datos asíncronos basados en Observables, 
+-- pensados como la evolución “Angular-style” de trabajar con RxJS sin tanta suscripción manual.
+
+-- Son Basicamente Un puente entre RxJS (Observables) y Signals, 
+-- que te permite consumir flujos reactivos como estado sincronizado en el template.
+
+-- En el componente by-country-page.component se ven mas detalles de su implementación
+
+
+--delay(300)
+-- es un operador rxjs que agrega un retraso a la peticion segun el tiempo que 
+-- le indiquemos
+===========================================================================

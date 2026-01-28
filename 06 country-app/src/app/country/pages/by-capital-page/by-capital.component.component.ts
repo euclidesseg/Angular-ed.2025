@@ -20,6 +20,7 @@ export class ByCapitalPageComponent {
   isError = signal<string | null>(null);
 
   countries = signal<Country[]>([]);
+
   onSearch(querySearch: string) {
 
     if (this.isLoading()) return;
@@ -27,11 +28,20 @@ export class ByCapitalPageComponent {
     this.isLoading.set(true);
     this.isError.set(null);// limpiar errr en caso de existir
 
-    this.countryService.searchByCapital(querySearch).subscribe((resp) => {
-      this.isLoading.set(false); // false porque ya cargo la data correctamente
-      this.countries.set(resp);
-      
-      console.log(this.countries());
-    })
+    this.countryService.searchByCapital(querySearch)
+      .subscribe(
+        {
+          next: (resp) => {
+            this.isLoading.set(false); // false porque ya cargo la data correctamente
+            this.countries.set(resp);
+
+          },
+          error:(err) => {
+            this.isLoading.set(false)
+            this.countries.set([])
+            this.isError.set(err)
+          },
+        }
+      )
   }
 }

@@ -1,2 +1,8 @@
-<app-search (strSearch)="onSearch($event)" placeHolder="Buscar por pais"></app-search>
-<app-table [countries]="[]"></app-table>
+<app-search (strSearch)="this.query.set($event)" placeHolder="Buscar por pais"></app-search>
+
+<app-table 
+    [countries]="countryRxResource.value()?? []"
+    [erorMessage]="countryRxResource.error()" 
+    [isEmpty]="countryRxResource.hasValue()" 
+    [isLoading]="countryRxResource.isLoading()">
+</app-table>
