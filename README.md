@@ -1,129 +1,127 @@
-===============================================================================
+# 📚 Documentación del Curso
 
-###### **Sección 03-typescript introduccion**
+---
 
-Se explican en esta sección los temas de
+## 🧠 Sección 03 – TypeScript Introducción
 
-**Tipos**
+En esta sección se explican los fundamentos esenciales de **TypeScript**:
 
-**Objetos de interfaces**
+- 🔹 Tipos
+- 🔹 Objetos e Interfaces
+- 🔹 Funciones
+- 🔹 Desestructuración básica
+- 🔹 Desestructuración en funciones
+- 🔹 Clases
+- 🔹 Composición de clases
+- 🔹 Genéricos
+- 🔹 Encadenamiento opcional
 
-**Funciones**
+---
 
-**Desestructuracion básica**
+## ⚙️ Sección 03 – Bases (Angular)
 
-**Desestructuración de funciones**
+En esta sección se explican los conceptos base de Angular:
 
-**Clases**
-**Composicion de clases**
-**Genericos**
-**Encadenamiento opcional**
+- 🔹 Señales (Signals)
+- 🔹 Señales computadas (Computed Signals)
+- 🔹 Zone.js
+- 🔹 Zoneless
+- 🔹 Decorador `@Component`
+- 🔹 Páginas
 
-===============================================================================
+---
 
+## 🚀 Sección 04 – Expandiendo las Bases
 
-===============================================================================
+En esta sección se profundiza en conceptos clave de Angular:
 
-###### **Sección 03-bases**
+- 🔹 `RouterLink`
+- 🔹 Componentes
+- 🔹 Comunicación entre componentes:
+  - 📤 Padre → Hijo (`@Input`)
+  - 📥 Hijo → Padre (`@Output`)
+- 🔹 Servicios
+- 🔹 Inyección de dependencias
+- 🔹 Efectos
+- 🔹 LocalStorage con validaciones
+- 🔹 Despliegues y `HashRouter`
 
-Se explican en esta sección los temas de
+---
 
-**Señales**
+## 🎬 Sección 05 – Gifs App
 
-**Señales computadas**
+Aplicación práctica donde se aplican múltiples conceptos:
 
-**Zone.js**
+- 🔹 Separación de componentes
+- 🔹 Rutas y rutas hijas
+- 🔹 Paleta de comandos
+- 🔹 Variables de entorno (Environments)
+- 🔹 Alias de paths
+- 🔹 Rutas dinámicas
+- 🔹 Manejo de LocalStorage
+- 🔹 Observables → Señales
+- 🔹 Reutilización de componentes
+- 🔹 Peticiones HTTP
+- 🔹 Manejo de caché
+- 🔹 Mapeo de información
+- 🔹 `pipe()` para encadenar operadores RxJS
+- 🔹 `Record<>` tipado para objetos con llaves dinámicas
 
-**Zonless.js**
+---
 
-**Decoradores @Components**
+## 🌎 Sección 06 – Country App (Maquetación)
 
-**Paginas**
+En esta sección se trabaja principalmente la estructura visual y de rutas:
 
-===============================================================================
+- 🔹 Rutas hijas
+- 🔹 Rutas anidadas
+- 🔹 Creación y comunicación entre componentes
+- 🔹 TailwindCSS y DaisyUI
+- 🔹 Archivo de rutas por feature/módulo
+- 🔹 Carga perezosa (Lazy Loading) de módulos de ruta
 
+---
 
+## 🌍 Sección 07 – Country App (Funcionalidad)
 
-===============================================================================
+Aquí se implementa la lógica completa de la aplicación:
 
-###### **Sección 04-Expandiendo bases**
+- 🔹 Resources
+- 🔹 rxResources
+- 🔹 Señales
+- 🔹 Servicios
+- 🔹 Operador `delay` de RxJS
+- 🔹 Reutilización de componentes
+- 🔹 Peticiones HTTP
+- 🔹 Operadores de RxJS
 
-Se explican en esta sección los temas de
+---
 
-**RouterLInk**
+## 🧩 Sección 08 – Country App (Avanzado)
 
-**Componentes**
-**comunicacion entre componentes enviar datos de padres a hijos input**
-**comunicacion entre componentes enviar datos de hijos a padres outpus**
+Conceptos avanzados para optimización y navegación:
 
+- 🔹 Caché
+- 🔹 Router
+- 🔹 Query Parameters
+- 🔹 Servicios
+- 🔹 Configuraciones
+- 🔹 Debounce
+- 🔹 `queryParamMap`
 
-**Servicios**
-**Inyeccion de dependeicas**
-**Efectos**
-**Local storage con validaciones**
-**Despliegues y HasRouter**
+---
 
-===============================================================================
+# ✅ Resumen General
 
+Este curso cubre:
 
-===============================================================================
-###### **Sección 05-Gifs App**
-Se explican en esta sección los temas de
+- Fundamentos sólidos de **TypeScript**
+- Arquitectura y bases modernas de **Angular con Signals**
+- Comunicación entre componentes
+- Manejo avanzado de rutas
+- Consumo de APIs con **RxJS**
+- Manejo de estado
+- Optimización con caché
+- Buenas prácticas de estructura y escalabilidad
 
-**Separacion de componentes**
-**Rutas y rutas hijas**
-**PALETA DE COMANDOS**
-**Environments-Variables de entorno**
-**Alias de paths**
-**Rutas dinamicas** 
-**Manejo de LocalStorage**
-**Observables a Señales**
-**Reutilización de componentes**
-**Peticiones HTTP**
-**Manejo de caché**
-**Mapeo de información**
-**Pipe() para encadenar operadores RXJS**
-**Records tipado para un objeto de llaves dinamicas**
-**LocalStorage**
-===============================================================================
-
-===============================================================================
-###### **Sección 06-countri app maquetación**
-Se explican en esta sección los temas de
-
-**Rutas Hijas**
-**Rutas Anidadas**
-**Creación y comunicación entre componentes**
-**Tailwind y DaisyUI**
-**Archivo de ruta por feature / module**
-**Carga prezosa de modulos de ruta**
-
-===============================================================================
-===============================================================================
-###### **Sección 07-countri app funcionalidad**
-Se explican en esta sección los temas de
-
-**Resources**
-**rxResources**
-**Señales**
-**Servicios**
-**Delay operator rxjs**
-**Reutilización de componentes**
-**Peticiones http**
-**Operadores de RXJS**
-
-===============================================================================
-===============================================================================
-###### **Sección 08-countri app avanzado**
-Se explican en esta sección los temas de
-
-**Caché**
-**Router**
-**QueryParameters**
-**Servicios**
-**Configuraciones**
-**Devounse**
-**Router**
-**queryParamsMap**
-
-===============================================================================
+---
