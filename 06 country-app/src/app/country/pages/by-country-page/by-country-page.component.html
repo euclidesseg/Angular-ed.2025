@@ -1,8 +1,9 @@
-<app-search (strSearch)="this.query.set($event)" placeHolder="Buscar por pais"></app-search>
+<app-search (strSearch)="this.query.set($event)" placeHolder="Buscar por pais" [initialValue]="query()"></app-search>
 
 <app-table 
-    [countries]="countryRxResource.value()?? []"
-    [erorMessage]="countryRxResource.error()" 
-    [isEmpty]="countryRxResource.hasValue()" 
-    [isLoading]="countryRxResource.isLoading()">
+    [countries]="countryResource.value()?? []"
+    [erorMessage]="countryResource.error()" 
+    [isEmpty]="countryResource.hasValue()" 
+    [isLoading]="countryResource.isLoading()"
+    >
 </app-table>

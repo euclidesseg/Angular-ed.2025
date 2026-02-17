@@ -4,10 +4,12 @@
     class="input input-bordered mr-5 w-56" 
     [placeholder]="placeHolder()"
     #txtSearch
-    (keyup.enter)="onSearch(txtSearch.value)"
+    (keyup.enter)="inputValue.set(txtSearch.value)"
+    (keyup)="inputValue.set(txtSearch.value)"
+    [value]="initialValue()"
     >
     <button 
     class="btn btn-primary"
-    (click)="onSearch(txtSearch.value)"
+    (click)="inputValue.set(txtSearch.value)"
     >Buscar</button>
 </section>

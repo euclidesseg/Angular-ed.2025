@@ -113,3 +113,17 @@ Se explican en esta sección los temas de
 **Operadores de RXJS**
 
 ===============================================================================
+===============================================================================
+###### **Sección 08-countri app avanzado**
+Se explican en esta sección los temas de
+
+**Caché**
+**Router**
+**QueryParameters**
+**Servicios**
+**Configuraciones**
+**Devounse**
+**Router**
+**queryParamsMap**
+
+===============================================================================

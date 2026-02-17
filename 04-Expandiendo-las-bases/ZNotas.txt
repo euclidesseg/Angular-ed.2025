@@ -125,8 +125,7 @@ al componente que se cargará y se haaria de la siguieente manera:
 ==========================================================================================
 // effect:
 // Los effects son una herramienta de Angular Signals que sirven para ejecutar código cuando cambia una señal
-// especialmente cuando ese código tiene efectos secundarios.
-// Llamar a una API, Escribir en consola, Guardar en localStorage, Actualizar el DOM, Navegar con el router.
+// angular detecta cuando hay una señal dentro de un efecto y cada que esa señal cambia, el efecto se dispara
 ==========================================================================================
 ==========================================================================================
 // Desplegar y HasRouter

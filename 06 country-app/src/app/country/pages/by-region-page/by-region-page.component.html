@@ -1,1 +1,7 @@
-<app-table [countries]="[]"></app-table>
+<div class="flex flex-row items-center justify-items-center gap-2 py-4">
+    @for (region of regions; track region) {
+        <button [class]="{'btn-primary':regionSelected() === region }" class="btn btn-outline"(click)="regionSelected.set(region)">{{region}}</button>
+    }
+</div>
+
+<app-table [countries]="regionRxResource.value()!"></app-table>
