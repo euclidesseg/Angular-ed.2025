@@ -108,7 +108,7 @@ Conceptos avanzados para optimización y navegación:
 - 🔹 Configuraciones
 - 🔹 Debounce
 - 🔹 `queryParamMap`
-
+- 🔹 documentacion: https://github.com/DevTalles-corp/angular-country-app/tree/fin-seccion-11
 ---
 
 # ✅ Resumen General
