@@ -1,0 +1,67 @@
+<section class="p-5">
+    <h3 class="text-xl font-bold px-6">Pipes no incluidos en Angular</h3>
+    <div class="stats shadow flex flex-col">
+        <div class="stat">
+            <div class="stat-title">Toggle Case Pipe</div>
+            <div class="stat-value">{{ name() | toggleCase:upperCase() }}</div>
+            <div class="stat-desc">{{name()}}</div>
+            <button class="btn btn-primary p-2 rounded-lg w-24" (click)="toggleCase()">Togglecase</button>
+        </div>
+    </div>
+</section>
+
+<div class="divider my-2"></div>
+
+
+<section class="py-2">
+    <h1 class="font-bold text-xl">Pipes personalizados</h1>
+    <div class="flex gap-2 justify-end w-full py-2">
+        <button (click)="sortHeroes('name')" class="btn btn-primary">Por nombre</button>
+        <button (click)="sortHeroes('canFly')" class="btn btn-secondary">Por volar</button>
+        <button (click)="sortHeroes('color')" class="btn btn-accent">Por color</button>
+        <button (click)="sortHeroes('creator')" class="btn btn-info">Por creador</button>
+    </div>
+</section>
+
+<div class="overflow-x-auto w-full border border-slate-700 rounded-lg">
+    <table class="table table-xs">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nombre</th>
+                <th>Puede volar</th>
+                <th>Color</th>
+                <th>Creador</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (hero of heroes() | heroSortBy:sortBy(); track hero.id) {
+            <tr>
+                <td>{{hero.id}}</td>
+                <td>{{hero.name}}</td>
+                <td>
+                    <span class="text-xs w-44" [class.text-success]="hero.canFly" [class.text-accent]="!hero.canFly">
+                        {{hero.canFly | canFly}}
+                    </span>
+                </td>
+                <td>
+                    <span class="px-2 py-1 rounded-lg text-black font-semibold" [style.background-color]="hero.color | heroBgColor">
+                        {{hero.color | heroColor | titlecase}}
+                    </span>
+                </td>
+                <td>{{hero.creator | heroCreator}}</td>
+            </tr>
+            }
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>Nombre</th>
+                <th>Puede volar</th>
+                <th>Color</th>
+                <th>Creador</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>

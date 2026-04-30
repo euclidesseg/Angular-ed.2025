@@ -1,0 +1,78 @@
+
+<section class="p-2">
+    <h3 class="text-xl font-bold px-6">Pipes incluidos en Angular</h3>
+    <div class="stats stats-vertical lg:stats-horizontal shadow">
+      <div class="stat">
+        <div class="stat-title">Lowercase Pipe</div>
+        <div class="stat-value">{{nameUpper() | lowercase}}</div>
+        <div class="stat-desc">{{nameUpper()}}</div>
+      </div>
+    
+      <div class="stat">
+        <div class="stat-title">Uppercase Pipe</div>
+        <div class="stat-value">{{nameLower() | uppercase}}</div>
+        <div class="stat-desc">{{nameLower()}}</div>
+      </div>
+    
+      <div class="stat">
+        <div class="stat-title">Titlecase Pipe</div>
+        <div class="stat-value">{{fullName() | titlecase}}</div>
+        <div class="stat-desc">{{fullName()}}</div>
+      </div>
+    </div>
+
+       <div class="divider"></div>
+
+    <h3 class="text-xl font-bold px-6">Pipes para fechas</h3>
+    <div class="stats stats-vertical lg:stats-horizontal shadow">
+      <div class="stat">
+        <div class="stat-title">Date</div>
+        <div class="stat-value">{{customDate() | date}}</div>
+        <div class="stat-desc">{{customDate ()}}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Date |short|GMT-0500</div>
+        <div class="stat-value">{{customDate() | date: 'short':'GMT-0500'}}</div>
+        <div class="stat-desc">{{customDate ()}}</div>
+      </div>
+      <!-- short me permite mostrar la fecha en formato corto, tambien puedo usar |long|medium|full|shortDate|longDate-->
+      <!-- GMT-0500 me permite especificar la zona horaria -->
+      <div class="stat">
+        <div class="stat-title">Date 'yyyy MM'</div>
+        <div class="stat-value">{{customDate() | date: 'yyyy MM':'GMT-0500'}}</div>
+        <div class="stat-desc">{{customDate ()}}</div>
+      </div>
+      <!-- yyyy MM me permite mostrar la fecha en formato año mes -->
+    </div>
+    
+    <div class="divider"></div>
+    <div class="stats stats-vertical lg:stats-horizontal shadow">
+      <div class="stat">
+        <div class="stat-title">Date 'dd/MM/yyyy'</div>
+        <div class="stat-value">{{customDate() | date: 'dd/MM/yyyy':'GMT-0500'}}</div>
+        <div class="stat-desc">{{customDate ()}}</div>
+      </div>
+      <!-- dd/MM/yyyy me permite mostrar la fecha en formato día/mes/año -->
+      <div class="stat">
+        <div class="stat-title">Date 'HH:mm:ss'</div>
+        <div class="stat-value">{{customDate() | date: 'HH:mm:ss':'GMT-0500'}}</div>
+        <div class="stat-desc">{{customDate ()}}</div>
+      </div>
+      <!-- HH:mm:ss me permite mostrar la hora en formato horas:minutos:segundos -->
+      <div class="stat">
+        <div class="stat-title">Date 'EEEE d, MMMM'</div>
+        <div class="stat-value">{{customDate() | date: 'EEEE d, MMMM':'GMT-0500'}}</div>
+        <div class="stat-desc">{{customDate ()}}</div>
+      </div>
+      <!-- EEEE d, MMMM me permite mostrar la fecha en formato día de la semana, día, mes -->
+    </div>
+
+    <div class="flex items-center flex-row flex-wrap gap-4 mt-4">
+      <h1 class="text-xl font-bold">Locale Actual
+        <span class="badge badge-secondary">{{localeService.getLocale}}</span>
+      </h1>
+      <button class="btn btn-primary" (click)="changeLocale('fr')"> Changer en français</button>
+      <button class="btn btn-primary" (click)="changeLocale('en')"> Change to english</button>
+      <button class="btn btn-primary" (click)="changeLocale('es')"> Cambiar a español</button>
+    </div>
+</section>

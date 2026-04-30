@@ -1,0 +1,32 @@
+
+<section class="p-2">
+    <h3 class="text-xl font-bold px-6">Pipes incluidos en Angular</h3>
+    <div class="stats stats-vertical lg:stats-horizontal shadow">
+      <div class="stat">
+        <div class="stat-title">Number : 1.2-2</div>
+        <div class="stat-value">{{totalSells() | number : "1.2-2"}}</div>
+        <div class="stat-desc">{{totalSells()}}</div>
+      </div>
+      <!-- 1.2-2 me indica que quiero todo el numero entero y solo 2 decimales -->
+    
+      <div class="stat">
+        <div class="stat-title">Number : 1.3-3</div>
+        <div class="stat-value">{{totalSells() | number : "1.3-3"}}</div>
+        <div class="stat-desc">{{totalSells()}}</div>
+      </div>
+      <!-- 1.1-2 me indica que quiero al menos un dígito entero y solo 2 decimales -->
+      <div class="stat">
+        <div class="stat-title">Currency</div>
+        <div class="stat-value">{{totalSells() | currency : 'COP': 'symbol': '1.1-1'}}</div>
+        <div class="stat-desc">{{totalSells()}}</div>
+      </div>
+      <!-- symbol me permite mostrar el símbolo de la moneda -->
+      <div class="stat">
+        <div class="stat-title">Percent</div>
+        <div class="stat-value">{{percent() | percent}}</div>
+        <div class="stat-desc">{{percent()}}</div>
+      </div>
+    </div>
+
+ 
+</section>

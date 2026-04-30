@@ -1,0 +1,29 @@
+<section class="mx-5">
+    <h3 class="text-xl font-bold px-6">Pipes incluidos en Angular</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <app-card title="i18nSelect">
+            <h1>Saludos {{client().name}}, es un placer {{client().gender | i18nSelect:invitarionmap}} a nuestro evento</h1>
+            <button class="bg-primary rounded-lg block py-1 w-28 text-black" (click)="changeClient()">Cambiar cliente</button>
+        </app-card>
+
+        <app-card title="i18nPlural">
+            <h1>Actualmente {{clients().length | i18nPlural:clientsMap()}}</h1>
+            <button class="bg-primary rounded-lg block py-1 w-28 text-black" (click)="deleteClient()">Borrar cliente</button>
+        </app-card>
+        <app-card title="Slice Pipe">
+            <b>Original</b>
+            <p>{{clients().join(', ')}}</p>
+
+            <b>slice:0:2</b>
+            <p>{{clients() | slice:0:2}}</p>
+        </app-card>
+
+        <app-card title="Json Pipe">
+            <b>Objet</b>
+            <pre class="text-primary">{{client() | json}}</pre>
+
+            <b>Array</b>
+            <pre class="text-primary">{{clients() | json}}</pre>
+        </app-card>
+    </div>
+</section>
