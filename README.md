@@ -1,5 +1,18 @@
 # 📚 Documentación del Curso
 
+# ✅ Resumen General
+
+Este curso cubre:
+
+- Fundamentos sólidos de **TypeScript**
+- Arquitectura y bases modernas de **Angular con Signals**
+- Comunicación entre componentes
+- Manejo avanzado de rutas
+- Consumo de APIs con **RxJS**
+- Manejo de estado
+- Optimización con caché
+- Buenas prácticas de estructura y escalabilidad
+
 ---
 
 ## 🧠 Sección 03 – TypeScript Introducción
@@ -7,6 +20,7 @@
 En esta sección se explican los fundamentos esenciales de **TypeScript**:
 
 - 🔹 Tipos
+- 🔹 Operadores ??, || y !
 - 🔹 Objetos e Interfaces
 - 🔹 Funciones
 - 🔹 Desestructuración básica
@@ -108,20 +122,22 @@ Conceptos avanzados para optimización y navegación:
 - 🔹 Configuraciones
 - 🔹 Debounce
 - 🔹 `queryParamMap`
-- 🔹 documentacion: https://github.com/DevTalles-corp/angular-country-app/tree/fin-seccion-11
+- 🔹 document
+accion: https://github.com/DevTalles-corp/angular-country-app/tree/fin-seccion-11
 ---
 
-# ✅ Resumen General
+## 🧩 Sección 09 – Pipes
+- 🔹 DatePipe -- Cambiar idioms
+- 🔹 UpperCasePipe
+- 🔹 LowerCasePipe
+- 🔹 TitleCasePipe
+- 🔹 CurrencyPipe
+- 🔹 DecimalPipe
+- 🔹 PercentPipe
 
-Este curso cubre:
+## 🧩 Sección 10 – Pipes, Pipes personalizados
+- 🔹 Pipes para ordenar y filtrar arreglos
+- 🔹 Pipes para transformar strings
 
-- Fundamentos sólidos de **TypeScript**
-- Arquitectura y bases modernas de **Angular con Signals**
-- Comunicación entre componentes
-- Manejo avanzado de rutas
-- Consumo de APIs con **RxJS**
-- Manejo de estado
-- Optimización con caché
-- Buenas prácticas de estructura y escalabilidad
 
 ---
