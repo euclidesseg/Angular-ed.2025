@@ -1,5 +1,5 @@
 import { Pipe, type PipeTransform } from '@angular/core';
-import { Creator } from '../../interfaces/hero.interface';
+import { Creator } from '../interfaces/hero.interface';
 
 @Pipe({
   name: 'heroCreator',
