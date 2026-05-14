@@ -140,4 +140,28 @@ accion: https://github.com/DevTalles-corp/angular-country-app/tree/fin-seccion-1
 - 🔹 Pipes para transformar strings
 
 
+## 📋 Sección 11 – Formularios Reactivos
+
+En esta sección se trabajan los fundamentos y conceptos avanzados de formularios reactivos en Angular:
+
+- 🔹 `ReactiveFormsModule` en componentes Standalone
+- 🔹 `FormBuilder`
+- 🔹 `FormControl`
+- 🔹 `FormArray`
+- 🔹 `Controles dinámicos`
+- 🔹 `Formularios reactivos`
+- 🔹 `Campos reactivos fuera de formularios`
+- 🔹 `Validaciones personalizadas`
+- 🔹 `Síncronas`
+- 🔹 `Asíncronas`
+- 🔹 `Validaciones con`
+- 🔹 `Patrones`
+- 🔹 `Expresiones regulares`
+- 🔹 `Palabras en concreto`
+- 🔹 `Selectores`
+- 🔹 `Checkboxes`
+- 🔹 `Subscripciones`
+- 🔹 `Effects`
+- 🔹 `Pipes`
+
 ---

@@ -123,9 +123,78 @@ al componente que se cargará y se haaria de la siguieente manera:
 ==========================================================================================
 
 ==========================================================================================
-// effect:
-// Los effects son una herramienta de Angular Signals que sirven para ejecutar código cuando cambia una señal
-// angular detecta cuando hay una señal dentro de un efecto y cada que esa señal cambia, el efecto se dispara
+// effect()
+
+// Los effects pertenecen al sistema de Angular Signals.
+//
+// Un effect sirve para ejecutar código reactivo cuando cambian señales.
+//
+// Angular analiza automáticamente qué señales se leen dentro del effect.
+// Todas las señales leídas se convierten en dependencias reactivas.
+//
+// Ejemplo:
+//
+// const count = signal(0);
+//
+// effect(() => {
+//   console.log(count());
+// });
+//
+// En este caso:
+// - El effect se ejecuta inmediatamente una vez al crearse
+// - Angular detecta que dentro se leyó count()
+// - Cada vez que count cambie, el effect vuelve a ejecutarse
+//
+// IMPORTANTE:
+// Un effect SIEMPRE se ejecuta una primera vez aunque no existan señales.
+//
+// Ejemplo:
+//
+// effect(() => {
+//   console.log('Hola');
+// });
+//
+// Esto imprime "Hola" una sola vez.
+//
+// Si dentro del effect NO se leen señales:
+// - Angular no registra dependencias reactivas
+// - El effect NO volverá a ejecutarse automáticamente
+//
+// Ejemplo:
+//
+// effect(() => {
+//   console.log('Sin señales');
+// });
+//
+// Se ejecuta una sola vez.
+//
+// Los effects suelen utilizarse para:
+// - Escuchar cambios reactivos
+// - Ejecutar side effects
+// - Crear subscriptions
+// - Sincronizar datos
+// - Guardar información en localStorage
+// - Ejecutar limpieza automática
+//
+// Cleanup (limpieza)
+//
+// effect permite registrar funciones de limpieza usando onCleanup:
+//
+// effect((onCleanup) => {
+//
+//   const sub = observable.subscribe();
+//
+//   onCleanup(() => {
+//     sub.unsubscribe();
+//   });
+//
+// });
+//
+// Angular ejecuta esa limpieza:
+// - Antes de volver a ejecutar el effect
+// - O cuando el componente se destruye
+//
+// Esto evita memory leaks.
 ==========================================================================================
 ==========================================================================================
 // Desplegar y HasRouter

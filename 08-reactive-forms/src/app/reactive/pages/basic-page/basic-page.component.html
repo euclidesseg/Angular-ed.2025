@@ -1,0 +1,113 @@
+<h2>Reactivos: Básicos</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+
+        <!-- Para usar formGroup requerimos importar ReactiveFormModule -->
+         <!-- ngSumbit se suele usar en angular en vez de sumbit ya que este evita la propagacion del evento -->
+        <form [formGroup] = "myForm" (ngSubmit)="onSave()" autocomplete="off">
+
+            <!-- Campo de producto -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Producto</label>
+                <div class="col-sm-9">
+
+                    <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Nombre del producto"
+                    formControlName="name"
+                    >
+
+                    @if (formUtil.isValidField('name', myForm)) {
+                        <span class="form-text text-danger">
+                            {{formUtil.getFieldError('name',myForm)}}
+                        </span>
+                    }
+                </div>
+            </div>
+
+            <!-- Campo de producto -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Precio</label>
+                <div class="col-sm-9">
+                    <input type="number"
+                           class="form-control"
+                           placeholder="Precio del producto"
+                           formControlName="price"
+                           >
+                    @if (formUtil.isValidField('price', myForm)) {
+                        <span class="form-text text-danger">
+                            {{formUtil.getFieldError('price',myForm)}}
+                        </span>
+                    }
+                </div>
+            </div>
+
+            <!-- Campo de existencias -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Existencias</label>
+                <div class="col-sm-9">
+                    <input type="number"
+                           class="form-control"
+                           placeholder="Existencias del producto"
+                           formControlName="inStorage"
+                           >
+
+                    @if (formUtil.isValidField('inStorage', myForm)) {
+                        <span class="form-text text-danger">
+                            {{formUtil.getFieldError('inStorage',myForm)}}
+                        </span>
+                    }
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <button type="submit"
+                            class="btn btn-primary float-end">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+
+
+
+        </form>
+
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col">
+
+        <span>Valid</span>
+        <pre>{{ myForm.valid | json }}</pre>
+
+        <span>Pristine || si no se manipulo el formulario desde que se cargo</span>
+        <pre>{{ myForm.pristine | json }}</pre>
+
+        <span>Touched || si el formulario fue tocado</span>
+        <pre>{{ myForm.touched | json }}</pre>
+
+        <span>Value</span>
+        <pre>{{ myForm.value| json }}</pre>
+
+        <span>precio</span>
+        <pre>{{ myForm.controls['price'].value | json }}</pre>
+
+        <span>Precio - errors</span>
+        <pre>{{ myForm.controls['price'].errors  | json }}</pre>
+
+        <span>Producto</span>
+        <pre>{{ myForm.controls['name'].value | json }}</pre>
+
+        <span>Producto - errrors</span>
+        <pre>{{ myForm.controls['name'].errors | json }}</pre>
+    </div>
+</div>

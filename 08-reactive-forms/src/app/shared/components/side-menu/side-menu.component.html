@@ -1,0 +1,22 @@
+<h2>Páginas</h2>
+<hr>
+
+
+<ul class="list-group">
+    <h3 class="mt-3">Reactive</h3>
+    @for (menu of reactiveMenu; track menu.title) {
+        <li [routerLink]="menu.route" routerLinkActive="active" class="list-group-item cursor-pointer" role="button">{{menu.title}}</li>
+    }
+    
+    <h3 class="mt-3">Auth</h3>
+    @for (menu of authMenu; track menu.title) {
+        <li [routerLink]="menu.route" routerLinkActive="active" class="list-group-item cursor-pointer" role="button">{{menu.title}}</li>
+    }
+    
+    
+    <h3 class="mt-3">Paises</h3>
+    @for (menu of countryMenu; track menu.title) {
+        <li [routerLink]="menu.route" routerLinkActive="active" class="list-group-item cursor-pointer" role="button">{{menu.title}}</li>
+    }
+
+</ul>
