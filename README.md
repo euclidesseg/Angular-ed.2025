@@ -165,3 +165,12 @@ En esta sección se trabajan los fundamentos y conceptos avanzados de formulario
 - 🔹 `Pipes`
 
 ---
+## 📋 Sección 12 – LifeCicle Hooks
+
+En esta sección se trabajan los fundamentos y conceptos de ciclo de vida tradicional Nuevos hooks, Ciclo de vida cuando cambian inputs
+comunicacion entre componentes
+
+- 🔹 `` 
+
+
+---

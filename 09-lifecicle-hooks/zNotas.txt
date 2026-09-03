@@ -1,0 +1,4 @@
+Los lifecicles hooks
+=== No son mas que eventos que se llaman en un cierto momomento del ciclo de vida de nuestros componentes
+=== Recomendaciones trabajar hasta donde sea posible con señales en los componentes
+=== y no mezclar propiedades tradicionales con señales.
