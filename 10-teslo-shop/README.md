@@ -21,3 +21,7 @@ Este curso cubre:
 - 🔹 Servicios
 - 🔹 SlicePipe
 - 🔹 input.requeried - comunicaciond entre componentes de padre a hijo
+- 🔹 pipes personalizados para imagenes
+- 🔹 Parametros de ruta
+- 🔹 Query Parameters obtner un parametro de ruta
+

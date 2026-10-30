@@ -19,7 +19,7 @@ export const storeFrontRoutes: Routes = [
                 component: GenderPageComponent
             },
             {
-                path: 'product/:idSlug',
+                path: 'product/:idSlug', //indica que la ruta es product y que tiene un parametro idSlug
                 component: ProductPageComponent
             },
             {
