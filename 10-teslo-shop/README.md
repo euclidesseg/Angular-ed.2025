@@ -17,11 +17,16 @@ Este curso cubre:
 
 ## 🧠 ¿Qué se verá en esta sección?
 
-- 🔹 rxResouurces
+- 🔹 rxjs // products.service.ts
+- 🔹 rxResouurces // product-page.component
 - 🔹 Servicios
 - 🔹 SlicePipe
-- 🔹 input.requeried - comunicaciond entre componentes de padre a hijo
+- 🔹 input.requeried - comunicacion entre componentes de padre a hijo
 - 🔹 pipes personalizados para imagenes
 - 🔹 Parametros de ruta
 - 🔹 Query Parameters obtner un parametro de ruta
+- 🔹 swipper carruseles
+- 🔹 referencias locales # product-carrousel
+- 🔹 siclos de vida AfterViewInit product-carrousel
+
 

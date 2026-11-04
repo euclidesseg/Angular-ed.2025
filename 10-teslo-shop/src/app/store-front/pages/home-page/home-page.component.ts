@@ -14,7 +14,14 @@ export class HomePageComponent {
   private productService = inject(ProductService);
 
   private productResource = rxResource({
-        params: () => ({}),
-        stream: () => this.productService.getProducts()
+        // params() define los parámetros reactivos del recurso
+        // si en el futuro se desea pasar parámetros a la llamada del servicio, se puede hacer desde aquí
+        // si estos parámetros son señales cada vez que cambien, el recurso se volverá a cargar automáticamente
+      params: () => ({}), 
+        // stream es la función PRINCIPAL del rxResource
+        // Debe devolver SIEMPRE un Observable<T>
+        // Angular se suscribe y se desuscribe automáticamente
+        // En este caso, se llama al método getProducts() del ProductService para obtener la lista de productos
+      stream: () => this.productService.getProducts() 
   })
 }
